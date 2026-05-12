@@ -25,7 +25,7 @@ void inorderTraversal(Node* root)
     }
     inorderTraversal(root->left);
     if (-30 < root->x && root->x < 30){
-        printf(" %d ", root->x);
+        printf(" %d", root->x);
     }
     inorderTraversal(root->right);
 }
