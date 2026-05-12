@@ -1,9 +1,9 @@
 /** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2025/2026
- *   Modul               : 4
- *   Hari dan Tanggal    : 5 Mei 2026
+ *   Modul               : 5
+ *   Hari dan Tanggal    : 12 Mei 2026
  *   Nama (NIM)          : 13224074
  *   Nama File           : soal1.c
- *   Deskripsi           : Valid or invalid string of ()[]{}
+ *   Deskripsi           : Pre in order dan post order dari tree
  * 
  */
 
