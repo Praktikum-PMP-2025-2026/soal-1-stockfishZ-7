@@ -13,7 +13,7 @@
 #include <limits.h>
 
 typedef struct Node{
-    char x;
+    int x;
     struct Node* left;
     struct Node* right;
 } Node;
@@ -24,7 +24,9 @@ void inorderTraversal(Node* root)
         return;
     }
     inorderTraversal(root->left);
-    printf("%c ", root->x);
+    if (-30 < root->x && root->x < 30){
+        printf("%d ", root->x);
+    }
     inorderTraversal(root->right);
 }
 
@@ -33,7 +35,9 @@ void preOrder(struct Node* node) {
         return;
 
     // Visit the current node first
-    printf("%c ", node->x);
+    if (-30 < node->x && node->x < 30){
+        printf("%d ", node->x);
+    }
 
     // Traverse the left subtree
     preOrder(node->left);
@@ -54,7 +58,9 @@ void postOrder(struct Node *node)
     postOrder(node->right);
 
     // now we visit node
-    printf("%c ", node->x);
+    if (-30 < node->x && node->x < 30){
+        printf("%d ", node->x);
+    }
 }
 
 Node* createNode(int data)
@@ -121,7 +127,7 @@ void check(char s[]){
     Node* root = NULL;
 
     for (int i =   1; i <= strlen(s); i++){
-        insert(&root, s[i]);
+        insert(&root, s[i]-'0');
     }
     printf ("PRE ");
     preOrder(root);
@@ -138,9 +144,6 @@ int main(){
     char s[100];
     fgets(s, 100, stdin);
     remove_spaces(s);
-    for (int i = 0; i < strlen(s); i++){
-        printf("%c", s[i]);
-    }
 
     check(s);
 }
