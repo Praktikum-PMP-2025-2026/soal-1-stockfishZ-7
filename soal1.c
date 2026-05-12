@@ -25,7 +25,7 @@ void inorderTraversal(Node* root)
     }
     inorderTraversal(root->left);
     if (-30 < root->x && root->x < 30){
-        printf("%d ", root->x);
+        printf(" %d ", root->x);
     }
     inorderTraversal(root->right);
 }
@@ -36,7 +36,7 @@ void preOrder(struct Node* node) {
 
     // Visit the current node first
     if (-30 < node->x && node->x < 30){
-        printf("%d ", node->x);
+        printf(" %d", node->x);
     }
 
     // Traverse the left subtree
@@ -59,7 +59,7 @@ void postOrder(struct Node *node)
 
     // now we visit node
     if (-30 < node->x && node->x < 30){
-        printf("%d ", node->x);
+        printf(" %d", node->x);
     }
 }
 
@@ -129,13 +129,13 @@ void check(char s[]){
     for (int i =   1; i <= strlen(s); i++){
         insert(&root, s[i]-'0');
     }
-    printf ("PRE ");
+    printf ("PRE");
     preOrder(root);
     printf("\n");
-    printf ("IN ");
+    printf ("IN");
     inorderTraversal(root);
     printf("\n");
-    printf ("POST ");
+    printf ("POST");
     postOrder(root);    
     printf("\n");
 }
